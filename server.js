@@ -8,16 +8,7 @@ app.use(cors());
 app.set("port", process.env.PORT || 3001)
 app.locals.title = "Rancid Tomatillo Data"
 
-app.locals.favorites = [
-        {
-        "id": 694919,
-        "poster_path": "https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg",
-        "backdrop_path": "https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg",
-        "title": "Money Plane",
-        "average_rating": 6.875,
-        "release_date": "2020-09-29"
-        }
-    ]
+app.locals.favorites = []
 
 
 
