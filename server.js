@@ -23,7 +23,6 @@ app.get("/api/v1/user/favorites", (request, response) => {
 })
 
 app.post("/api/v1/user/favorites", (request, response) => {
-    console.log(response)
     const {  id, title, poster_path, backdrop_path, average_rating, release_date } = request.body
 
     app.locals.favorites.push({  id, title, poster_path, backdrop_path, average_rating, release_date })
