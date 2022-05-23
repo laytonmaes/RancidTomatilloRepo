@@ -19,7 +19,7 @@ app.get("/", (request, response) => {
 app.get("/api/v1/user/favorites", (request, response) => {
     const favorites = app.locals.favorites;
 
-    response.json({ favorites })
+    return response.json({ favorites })
 })
 
 app.post("/api/v1/user/favorites", (request, response) => {
@@ -27,7 +27,7 @@ app.post("/api/v1/user/favorites", (request, response) => {
 
     app.locals.favorites.push({  id, title, poster_path, backdrop_path, average_rating, release_date })
 
-    response.status(201).json({  id, title, poster_path, backdrop_path, average_rating, release_date })
+    return response.status(201).json({  id, title, poster_path, backdrop_path, average_rating, release_date })
 })
 
 app.listen(app.get("port"), () => {
